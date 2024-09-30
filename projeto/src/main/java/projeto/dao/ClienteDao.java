@@ -10,9 +10,9 @@ import java.util.List;
 import projeto.object.Cliente;
 
 public class ClienteDao extends GenericDao<Cliente, String> {
-
+    // Metodo para Listar Dados do Banco de Dados!
     @Override
-    public List<Cliente> ObterTodos() {
+    public List<Cliente> ObterTodos() { 
         List<Cliente> lista = new ArrayList<>();
 
         Connection conn = null;
@@ -44,7 +44,7 @@ public class ClienteDao extends GenericDao<Cliente, String> {
         return lista;
 
     }
-
+    //Fechar Conexão!
     private void closeResources(ResultSet rs, PreparedStatement ps, Connection conn) {
         try {
             if (rs != null) {
@@ -60,7 +60,7 @@ public class ClienteDao extends GenericDao<Cliente, String> {
             e.printStackTrace();
         }
     }
-
+    // Inserir Dados!
     @Override
     public void incluir(Cliente cliente) {
 
@@ -81,7 +81,7 @@ public class ClienteDao extends GenericDao<Cliente, String> {
             e.printStackTrace();
         }
     }
-
+    //Excluir Dados!
     public void excluir(int codigo) {
         Connection c1 = null;
         try {
@@ -104,7 +104,7 @@ public class ClienteDao extends GenericDao<Cliente, String> {
         }
 
     }
-
+    //Alterar Dados!
     @Override
     public void alterar(Cliente cliente) {
 

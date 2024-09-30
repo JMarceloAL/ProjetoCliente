@@ -63,12 +63,12 @@
                   <Button fx:id="Bsair" mnemonicParsing="false" text="Sair" />
               </items>
             </ToolBar>
-            <TableView fx:id="tabela" layoutY="111.0" prefHeight="385.0" prefWidth="800.0" AnchorPane.bottomAnchor="104.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="111.0">
+            <TableView fx:id="tabela" layoutY="108.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="385.0" prefWidth="800.0" AnchorPane.bottomAnchor="107.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="108.0">
               <columns>
                 <TableColumn fx:id="cid" prefWidth="27.0" text="ID" />
                 <TableColumn fx:id="cnome" prefWidth="279.0" text="NOME" />
-                  <TableColumn fx:id="ccpf" minWidth="0.0" prefWidth="168.0" text="CPF" />
-                  <TableColumn fx:id="cemail" prefWidth="186.0" text="E-MAIL" />
+                  <TableColumn fx:id="cemail" minWidth="0.0" prefWidth="176.0" text="E-MAIL" />
+                  <TableColumn fx:id="ccpf" prefWidth="178.0" text="CPF" />
                   <TableColumn fx:id="ctelefone" prefWidth="139.0" text="TELEFONE" />
               </columns>
             </TableView>

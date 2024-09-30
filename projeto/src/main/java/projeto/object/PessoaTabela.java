@@ -4,6 +4,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 public class PessoaTabela {
+    // Atributos Objeto Pessoatabela
     private final SimpleIntegerProperty codigo;
     private final SimpleStringProperty nome;
     private final SimpleStringProperty email;
@@ -19,6 +20,7 @@ public class PessoaTabela {
         this.numeroTelefone = new SimpleStringProperty(numeroTelefone);
     }
 
+    // get e set
     public Integer getId() {
         return codigo.get();
     }

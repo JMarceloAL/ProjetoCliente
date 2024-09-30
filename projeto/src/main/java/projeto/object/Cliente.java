@@ -1,7 +1,7 @@
 package projeto.object;
 
 public class Cliente {
-
+    // Atributos Objeto Cliente!
     public int codigo;
     public String nome;
     public String email;
@@ -12,6 +12,7 @@ public class Cliente {
 
     }
 
+    // Constructor!
     public Cliente(int codigo, String nome, String email, String cpf, String numeroTelefone) {
 
         this.codigo = codigo;
@@ -22,6 +23,7 @@ public class Cliente {
 
     }
 
+    // get e set
     public int getId() {
 
         return codigo;

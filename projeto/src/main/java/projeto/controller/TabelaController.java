@@ -4,8 +4,6 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -25,6 +23,8 @@ import projeto.view.Principal;
 import projeto.view.Tabela;
 
 public class TabelaController implements Initializable {
+
+    //
     @FXML
     private Button Blimpar;
 
@@ -130,6 +130,7 @@ public class TabelaController implements Initializable {
 
     }
 
+    // Faz alteração dos Dados no Banco e Atualiza A tabela com os novos dados!
     public void alterar() {
         @SuppressWarnings("unused")
         List<Cliente> clientelista = dao.ObterTodos();
@@ -150,6 +151,8 @@ public class TabelaController implements Initializable {
 
     }
 
+    // Preenche os Campos de texto com os dados do Obejto Selecionado Na Tabela para
+    // Editar!
     public void detalhes() {
         @SuppressWarnings("unused")
         List<Cliente> clientelista = dao.ObterTodos();
@@ -166,6 +169,7 @@ public class TabelaController implements Initializable {
 
     }
 
+    // Metodos Excluir dados da Tableview / Banco de dados!
     public void excluir() {
         @SuppressWarnings("unused")
         List<Cliente> clientelista = dao.ObterTodos();
@@ -181,6 +185,7 @@ public class TabelaController implements Initializable {
 
     }
 
+    // Lista Dados do DObanco para TableView!
     public void atualizarTabela() {
 
         List<Cliente> clientelista = dao.ObterTodos();
@@ -217,12 +222,14 @@ public class TabelaController implements Initializable {
         }
     }
 
+    // fecha a janela!
     public void closeView() {
 
         Tabela.getStage().close();
 
     }
 
+    // limpa os campos texfield
     public void limparcampo() {
 
         CampoNome.setText("");

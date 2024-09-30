@@ -57,7 +57,7 @@ public class PrincipalController implements Initializable {
         Bsair.setOnMouseClicked((MouseEvent e) -> {
             closeView();
         });
-
+        // Verifica a Conexão com o Banco de Dados
         Btestar.setOnMouseClicked((MouseEvent e) -> {
 
             if (ConnectBD.getConnect() != null) {

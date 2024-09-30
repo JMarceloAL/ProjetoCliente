@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class App extends Application {
-
+    // Executa o arquivo Login.fxml referente Aprimeira Janela do Progama!
     @SuppressWarnings("exports")
     @Override
     public void start(Stage stage) throws Exception {
