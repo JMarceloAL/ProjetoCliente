@@ -20,7 +20,7 @@ public class Tabela extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/Tabela.fxml"));
         Scene scense = new Scene(root);
-        stage.setTitle("Login");
+        stage.setTitle("Tabela");
         stage.setScene(scense);
         stage.resizableProperty().setValue(Boolean.FALSE);
         stage.show();

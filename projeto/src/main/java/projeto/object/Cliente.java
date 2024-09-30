@@ -72,14 +72,13 @@ public class Cliente {
         this.numeroTelefone = numeroTelefone;
     }
 
-    public void mostrarDados() {
+    public Cliente(PessoaTabela pessoaTabela) {
 
-        System.out.println("---------------------------");
-        System.out.println("ID :" + getId());
-        System.out.println("Nome :" + getNome());
-        System.out.println("CPF :" + getCpf());
-        System.out.println("EMAIL :" + getEmail());
-        System.out.println("TELEFONE :" + getNumero());
+        this.codigo = pessoaTabela.getId();
+        this.nome = pessoaTabela.getNome();
+        this.email = pessoaTabela.getEmail();
+        this.cpf = pessoaTabela.getCpf();
+        this.numeroTelefone = pessoaTabela.getNumeroTelefone();
 
     }
 }

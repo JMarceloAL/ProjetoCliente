@@ -20,7 +20,7 @@ public class Principal extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/Principal.fxml"));
         Scene scense = new Scene(root);
-        stage.setTitle("Login");
+        stage.setTitle("Inicio");
         stage.setScene(scense);
         stage.resizableProperty().setValue(Boolean.FALSE);
         stage.show();

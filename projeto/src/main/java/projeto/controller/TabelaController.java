@@ -4,6 +4,8 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -11,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -22,6 +25,30 @@ import projeto.view.Principal;
 import projeto.view.Tabela;
 
 public class TabelaController implements Initializable {
+    @FXML
+    private Button Blimpar;
+
+    @FXML
+    private Button Bselecionar;
+
+    @FXML
+    private Button Balterar;
+
+    @FXML
+    private TextField CampoCpf;
+
+    @FXML
+    private TextField CampoEmail;
+
+    @FXML
+    private TextField CampoNome;
+
+    @FXML
+    private TextField CampoTelefone;
+
+    @FXML
+    private Button Bexcluir;
+
     @FXML
     private Button Vcadastrar;
 
@@ -56,6 +83,26 @@ public class TabelaController implements Initializable {
     public void initialize(URL arg0, ResourceBundle arg1) {
         atualizarTabela();
 
+        Blimpar.setOnMouseClicked((MouseEvent e) -> {
+            limparcampo();
+        });
+
+        Bselecionar.setOnMouseClicked((MouseEvent e) -> {
+            detalhes();
+        });
+
+        Balterar.setOnMouseClicked((MouseEvent e) -> {
+            alterar();
+            CampoNome.setText("");
+            CampoEmail.setText("");
+            CampoCpf.setText("");
+            CampoTelefone.setText("");
+        });
+
+        Bexcluir.setOnMouseClicked((MouseEvent e) -> {
+            excluir();
+        });
+
         Bsair.setOnMouseClicked((MouseEvent e) -> {
             closeView();
         });
@@ -80,6 +127,57 @@ public class TabelaController implements Initializable {
             }
 
         });
+
+    }
+
+    public void alterar() {
+        @SuppressWarnings("unused")
+        List<Cliente> clientelista = dao.ObterTodos();
+        PessoaTabela pessoaTabela = tabela.getSelectionModel().getSelectedItem();
+
+        Cliente clienteupdate = new Cliente(pessoaTabela);
+
+        clienteupdate.setNome(CampoNome.getText());
+        clienteupdate.setCpf(CampoCpf.getText());
+        clienteupdate.setEmail(CampoEmail.getText());
+        clienteupdate.setNumero(CampoTelefone.getText());
+
+        dao.alterar(clienteupdate);
+
+        clientelista = dao.ObterTodos();
+
+        atualizarTabela();
+
+    }
+
+    public void detalhes() {
+        @SuppressWarnings("unused")
+        List<Cliente> clientelista = dao.ObterTodos();
+        PessoaTabela pessoa = tabela.getSelectionModel().getSelectedItem();
+        String nome = pessoa.getNome();
+        String email = pessoa.getEmail();
+        String cpf = pessoa.getCpf();
+        String telefone = pessoa.getNumeroTelefone();
+
+        CampoNome.setText(nome);
+        CampoEmail.setText(email);
+        CampoCpf.setText(cpf);
+        CampoTelefone.setText(telefone);
+
+    }
+
+    public void excluir() {
+        @SuppressWarnings("unused")
+        List<Cliente> clientelista = dao.ObterTodos();
+        PessoaTabela pessoa = tabela.getSelectionModel().getSelectedItem();
+        int id = pessoa.getId();
+
+        listaTabela.remove(pessoa);
+
+        dao.excluir(id);
+
+        clientelista = dao.ObterTodos();
+        atualizarTabela();
 
     }
 
@@ -122,6 +220,15 @@ public class TabelaController implements Initializable {
     public void closeView() {
 
         Tabela.getStage().close();
+
+    }
+
+    public void limparcampo() {
+
+        CampoNome.setText("");
+        CampoEmail.setText("");
+        CampoCpf.setText("");
+        CampoTelefone.setText("");
 
     }
 }

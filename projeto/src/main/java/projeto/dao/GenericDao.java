@@ -6,13 +6,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public abstract class GenericDao<E, K> {
-
+// Atributos de Conexão com Banco de dados Mysql!
     private static final String url = "jdbc:mysql://localhost:3306/sistema";
     private static final String user = "root";
     private static final String password = "root";
 
     private static Connection conn;
-
+// Metodos de Conexão com Banco!
     public static Connection getConnect() {
 
         try {

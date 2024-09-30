@@ -20,7 +20,7 @@ public class Cadastrar extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/Cadastrar.fxml"));
         Scene scense = new Scene(root);
-        stage.setTitle("Login");
+        stage.setTitle("Cadastrar");
         stage.setScene(scense);
         stage.resizableProperty().setValue(Boolean.FALSE);
         stage.show();

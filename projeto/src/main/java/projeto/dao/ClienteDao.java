@@ -124,14 +124,4 @@ public class ClienteDao extends GenericDao<Cliente, String> {
         }
     }
 
-    public void listar() {
-
-        System.out.println("lsitando");
-        List<Cliente> cliente = new ClienteDao().ObterTodos();
-        for (int x = 0; x < cliente.size(); x++) {
-
-            cliente.get(x).mostrarDados();
-        }
-    }
-
 }
