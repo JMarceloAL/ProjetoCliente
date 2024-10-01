@@ -1,4 +1,4 @@
-#  ProjetoExtensivo Estacio Sistema Cadastral
+#  Projeto Extensivo Estacio Sistema Cadastral
 
 
 # Sobre o projeto
