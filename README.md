@@ -3,7 +3,7 @@
 
 # Sobre o projeto
 
-https://wmazoni-sds1.netlify.app
+
 
 Oprojeto Foi Desenvolvido  no Trabalho Extensivo Da faculdade Estácio .
 
