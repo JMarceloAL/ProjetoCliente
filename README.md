@@ -23,12 +23,11 @@ O Projeto consiste em Cadastrar Clientes em um Banco de Dados e Posteriormente e
 ## Front end
 - JavaFX
 # Como executar o projeto
-  Abra o projeto 
-## Back end
+  Abra o projeto em sua IDE e inicie o aquivo app.java
 Pré-requisitos: 
 - java 22
 - Maven
-- Banco de dados Mysql tabela - [id] , [nome] , [cpf], [email] e [telefone] primarykei [id]
+- Banco de dados Mysql 
 - Biblioteca Java fx
 - MysqlConnector
 
