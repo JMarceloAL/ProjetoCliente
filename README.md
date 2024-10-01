@@ -23,8 +23,8 @@ O Projeto consiste em Cadastrar Clientes em um Banco de Dados e Posteriormente e
 ## Front end
 - JavaFX
 # Como executar o projeto
-  Abra o projeto em sua IDE e inicie o aquivo app.java
-Pré-requisitos: 
+  Abra o projeto em sua IDE e inicie o aquivo Login.java
+## Pré-requisitos: 
 - java 22
 - Maven
 - Banco de dados Mysql 
